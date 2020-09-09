@@ -43,8 +43,8 @@ type DeltaRead struct {
 }
 
 var (
-	re = regexp.MustCompile(`(?m)Path.*\nInode.*.?`)
-
+	re         = regexp.MustCompile(`(?m)Path.*\nInode.*.?`)
+	_          = kingpin.Version("0.0.1b")
 	fp         = kingpin.Flag("inputfile", "file to read for parsing").Required().String()
 	searchPath = kingpin.Flag("searchpath", "folder path to look for in the input file").Required().String()
 )
